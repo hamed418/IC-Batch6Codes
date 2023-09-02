@@ -75,6 +75,9 @@ function App10() {
     //~~~~~~~~~~To Update a notes~~~~~~~~~~~~~~~
     const updateHandler=(e)=>{
         e.preventDefault();
+        if(!noteTitle){
+            return alert("Please enter avalid name!");
+        }
         fetch(`http://localhost:3000/notes/${editableNote.id}`,{
             method:"PATCH",
             body:JSON.stringify({
@@ -86,9 +89,6 @@ function App10() {
         })
         .then(()=>{
             getAllNotes();
-            if(!noteTitle){
-                return alert("Please enter avalid name!");
-            }
             setEditMode(false);
             setEditableNote(null);
             setNoteTitle(" ");
