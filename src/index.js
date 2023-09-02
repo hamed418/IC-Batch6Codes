@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App9 from './LiveClass-9/App9'
+import App10 from './LiveClass-10/App10';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
-   <App9/>
+   <App10/>
      
   </React.StrictMode>
 );
