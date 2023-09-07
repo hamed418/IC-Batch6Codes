@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App11 from './LiveClass-11-ContextAPi/App11';
-import StudentProvider from './LiveClass-11-ContextAPi/Context/Student';
-
+import App from './Components/App';
+import StudentProvider from './Components/Context/Student';
+//import  Router  from './ReactRouterDom-LiveVlass-13/Router';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
    <StudentProvider>
-    <App11/>
+    <App/>
    </StudentProvider>
+     {/* <Router/> */}
+
+
      
   </React.StrictMode>
 );

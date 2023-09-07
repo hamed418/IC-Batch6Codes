@@ -1,10 +1,10 @@
 
-import './App11.css'
+import './App.css'
 import StudentSection from './StudentSection';
 import Form from './Form';
 
 
-const App11 = () => {
+const App = () => {
     return (
         <div>
             <Form />
@@ -13,4 +13,4 @@ const App11 = () => {
     )
 }
 
-export default App11
+export default App
