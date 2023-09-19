@@ -3,15 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import { routerdom } from './router/Router';
-import { RouterProvider } from 'react-router-dom';
+import App from './App';
+import BoardProvider from './contexts/Board';
+import ListProvider from './contexts/List';
+import TaskProvider from './contexts/Task';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  
     
-    <RouterProvider router={routerdom}/>
+    <BoardProvider>
+      <ListProvider>
+        <TaskProvider>
+          <App/>
+        </TaskProvider>
+      </ListProvider>
+    </BoardProvider>
 
-</React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
