@@ -4,20 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
-import BoardProvider from './contexts/Board';
-import ListProvider from './contexts/List';
-import TaskProvider from './contexts/Task';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-    
-    <BoardProvider>
-      <ListProvider>
-        <TaskProvider>
-          <App/>
-        </TaskProvider>
-      </ListProvider>
-    </BoardProvider>
+
+   <App/>
+
 
 
 );
