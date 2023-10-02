@@ -1,24 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
+import {configureStore} from '@reduxjs/toolkit'
 
-import { cartReducer } from './cart';
+import { logger } from 'redux-logger';
+import { TodoReducer } from './Todo';
 
-
-
-const rootReducer = {
-    carta: cartReducer 
+const RootReducer={
+    todos:TodoReducer
 }
-
-const myLogger = (store) => (next) => (action) => {
-    console.log(`Prev State: ${JSON.stringify(store.getState())}`);
-    console.log(`ACTION: ${JSON.stringify(action)}`);
-    next(action)
-}
-
-// useSelector((state) => state.cart)
-export const Store = configureStore({
-    reducer: rootReducer,
-    // composeWithDevTools(applyMiddleware(myLogger, logger))
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger, myLogger])
-
+export const Store=configureStore({
+    reducer:RootReducer,
+    middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat([logger])
 })
