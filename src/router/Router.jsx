@@ -1,19 +1,15 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom"
-import Posts from "../Pages/Posts"
-import PostDetails from "../Pages/PostDetails"
-import Todos from "../Pages/Todos"
-import Home from "../Pages/Home"
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from '../pages/Home'
+import Cart from '../pages/Cart'
 
 const Router = () => {
   return (
-  <BrowserRouter>
-   <Routes>
-    <Route  path="/" element={<Home/>}/>
-    <Route  path="/Todos" element={<Todos/>}/>
-    <Route  path="/Posts" element={<Posts/>}/>
-    <Route path="/Posts/:postId" element={<PostDetails/>}/>
-   </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element = {<Home />}/>
+            <Route path = '/cart' element = {<Cart />}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
