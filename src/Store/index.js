@@ -1,12 +1,10 @@
-import {configureStore} from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
+import { noteApi } from "./RTK-query";
 
-import { logger } from 'redux-logger';
-import { TodoReducer } from './Todo';
 
-const RootReducer={
-    todos:TodoReducer
-}
-export const Store=configureStore({
-    reducer:RootReducer,
-    middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat([logger])
+export const store=configureStore({
+    reducer:{
+        [noteApi.reducerPath]:noteApi.reducer
+    },
+    middleware:(gDM)=>gDM().concat(noteApi.middleware)
 })
